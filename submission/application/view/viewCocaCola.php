@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrinkto-fit=no">
-        <link rel="stylesheet" type="text/css" href="application/css/x3dom.css"></link>
-        <link rel="stylesheet" type="text/css" href="application/css/jquery.fancybox.min.css">
-        <link rel="stylesheet" type="text/css" href="application/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="application/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../application/css/x3dom.css"></link>
+        <link rel="stylesheet" type="text/css" href="../application/css/jquery.fancybox.min.css">
+        <link rel="stylesheet" type="text/css" href="../application/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../application/css/main.css">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
         <title>Coca Cola 3D App</title>
@@ -65,39 +65,39 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="card">
-                            <a href="application/assets/images/coca_cola.jpg">
-                                <img class="card-img-top img-fluid img-thumbnail" src="application/assets/images/coca_cola.jpg" alt="Coca Cola">
+                            <a href="../application/assets/images/coca_cola.jpg">
+                                <img class="card-img-top img-fluid img-thumbnail" src="../application/assets/images/coca_cola.jpg" alt="Coca Cola">
                             </a>
                             <div class="card-body">
-                                <div id="title_left" class="card-title drinksText"></div>
-                                <div id="subTitle_left" class="card-subtitle drinksText"></div>
-                                <div id="description_left" class="card-text drinksText"></div>
+                                <div id="title_left" class="card-title drinksText"><h2><?php echo $data[0]['brand'] ?></h2></div>
+                                <div id="subTitle_left" class="card-subtitle drinksText"><h3><?php echo $data[0]['year'] ?>, <?php echo $data[0]['location'] ?></h3></div>
+                                <div id="description_left" class="card-text drinksText"><p><?php echo $data[0]['modelDescription'] ?></p></div>
                                 <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola" class="btn btn-primary">Find out more ...</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
-                            <a href="application/assets/images/sprite.jpg">
-                                <img class="card-img-top img-fluid img-thumbnail" src="application/assets/images/sprite.jpg" alt="Sprite">
+                            <a href="../application/assets/images/sprite.jpg">
+                                <img class="card-img-top img-fluid img-thumbnail" src="../application/assets/images/sprite.jpg" alt="Sprite">
                             </a>
                             <div class="card-body">
-                                <div id="title_centre" class="card-title drinksText"></div>
-                                <div id="subTitle_centre" class="card-subtitle drinksText"></div>
-                                <div id="description_centre" class="card-text drinksText"></div>
+                                <div id="title_centre" class="card-title drinksText"><h2><?php echo $data[1]['brand'] ?></h2></div>
+                                <div id="subTitle_centre" class="card-subtitle drinksText"><h3><?php echo $data[1]['year'] ?>, <?php echo $data[1]['location'] ?></h3></div>
+                                <div id="description_centre" class="card-text drinksText"><p><?php echo $data[1]['modelDescription'] ?></p></div>
                                 <a href="http://www.coca-cola.co.uk/drinks/sprite/sprite" class="btn btn-primary">Find out more ...</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
-                            <a href="application/assets/images/dr_pepper.jpg">
-                                <img class="card-img-top img-fluid img-thumbnail" src="application/assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                            <a href="../application/assets/images/dr_pepper.jpg">
+                                <img class="card-img-top img-fluid img-thumbnail" src="../application/assets/images/dr_pepper.jpg" alt="Dr Pepper">
                             </a>
                             <div class="card-body">
-                                <div id="title_right" class="card-title drinksText"></div>
-                                <div id="subTitle_right" class="card-subtitle drinksText"></div>
-                                <div id="description_right" class="card-text drinksText"></div>
+                                <div id="title_right" class="card-title drinksText"><h2><?php echo $data[2]['brand'] ?></h2></div>
+                                <div id="subTitle_right" class="card-subtitle drinksText"><h3><?php echo $data[2]['year'] ?>, <?php echo $data[2]['location'] ?></h3></div>
+                                <div id="description_right" class="card-text drinksText"><p><?php echo $data[2]['modelDescription'] ?></p></div>
                                 <a href="http://www.coca-cola.co.uk/drinks/dr-pepper/dr-pepper" class="btn btn-primary">Find out more ...</a>
                             </div>
                         </div>
@@ -128,57 +128,57 @@
                             </div>
                             <!-- X3D models -->
                             <div class="card-body">
-                                <div id="x3dModelTitle_coke" class="card-title drinksText"></div>
-                                <div id="x3dModelTitle_sprite" class="card-title drinksText"></div>
-                                <div id="x3dModelTitle_pepper" class="card-title drinksText"></div>
+                                <div id="x3dModelTitle_coke" class="card-title drinksText"><h2><?php echo $data[0]['x3dModelTitle'] ?></h2></div>
+                                <div id="x3dModelTitle_sprite" class="card-title drinksText"><h2><?php echo $data[1]['x3dModelTitle'] ?></h2></div>
+                                <div id="x3dModelTitle_pepper" class="card-title drinksText"><h2><?php echo $data[2]['x3dModelTitle'] ?></h2></div>
                                 <div class="model3D">
                                     <x3d id="wire">
                                         <scene>
                                             <Switch whichChoice="0" id='SceneSwitch'>
                                                 <transform>
-                                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="application/assets/x3d/coke.x3d" > </inline>
+                                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="<?php echo $data[0]['x3dPath'] ?>"> </inline>
                                                 </transform>
                                                 <transform>
-                                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="application/assets/x3d/sprite.x3d"> </inline>
+                                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="<?php echo $data[1]['x3dPath'] ?>"> </inline>
                                                 </transform>
                                                 <transform>
-                                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="application/assets/x3d/pepper.x3d"> </inline>
+                                                    <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url=<?php echo '"'.$data[2]['x3dPath'].'"' ?>> </inline>
                                                 </transform>
                                             </Switch>
                                         </scene>
                                     </x3d>
                                 </div>
-                                <div id="x3dCreationMethod_coke" class="card-text drinksText"></div>
-                                <div id="x3dCreationMethod_sprite" class="card-text drinksText"></div>
-                                <div id="x3dCreationMethod_pepper" class="card-text drinksText"></div>
+                                <div id="x3dCreationMethod_coke" class="card-text drinksText"><p><?php echo $data[0]['x3dCreationMethod'] ?></p></div>
+                                <div id="x3dCreationMethod_sprite" class="card-text drinksText"><p><?php echo $data[1]['x3dCreationMethod'] ?></p></div>
+                                <div id="x3dCreationMethod_pepper" class="card-text drinksText"><p><?php echo $data[2]['x3dCreationMethod'] ?></p></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <!-- Coke description card -->
                         <div class="card" id="cokeDescription">
-                            <div class="card-header description-header" id="title_coke"></div>
+                            <div class="card-header description-header" id="title_coke"><?php echo $data[0]['modelTitle'] ?></div>
                             <div class="card-body">
-                                <div class="card-subtitle drinksText" id="subTitle_coke"></div>
-                                <div class="card-text drinksText" id="description_coke"></div>
+                                <div class="card-subtitle drinksText" id="subTitle_coke"><h3><?php echo $data[0]['modelSubtitle'] ?></h3></div>
+                                <div class="card-text drinksText" id="description_coke"><p><?php echo $data[0]['modelDescription'] ?></p></div>
                                 <a href="http://www.coca-cola.co.uk/drinks/coca-cola/coca-cola" class="btn btn-primary">Find out more ...</a>   
                             </div>
                         </div>
                         <!-- Sprite description card -->
                         <div class="card" id="spriteDescription">
-                            <div class="card-header description-header" id="title_sprite"></div>
+                            <div class="card-header description-header" id="title_sprite"><?php echo $data[1]['modelTitle'] ?></div>
                             <div class="card-body">
-                                <div class="card-subtitle drinksText" id="subTitle_sprite"></div>
-                                <div class="card-text drinksText" id="description_sprite"></div>
+                                <div class="card-subtitle drinksText" id="subTitle_sprite"><h3><?php echo $data[1]['modelSubtitle'] ?></h3></div>
+                                <div class="card-text drinksText" id="description_sprite"><p><?php echo $data[1]['modelDescription'] ?></p></div>
                                 <a href="http://www.coca-cola.co.uk/drinks/sprite/sprite" class="btn btn-primary">Find out more ...</a>   
                             </div>
                         </div>
                         <!-- Pepper description card -->
                         <div class="card" id="pepperDescription">
-                            <div class="card-header description-header" id="title_pepper"></div>
+                            <div class="card-header description-header" id="title_pepper"><?php echo $data[2]['modelTitle'] ?></div>
                             <div class="card-body">
-                                <div class="card-subtitle drinksText" id="subTitle_pepper"></div>
-                                <div class="card-text drinksText" id="description_pepper"></div>
+                                <div class="card-subtitle drinksText" id="subTitle_pepper"><h3><?php echo $data[2]['modelSubtitle'] ?></h3></div>
+                                <div class="card-text drinksText" id="description_pepper"><p><?php echo $data[2]['modelDescription'] ?></p></div>
                                 <a href="http://www.coca-cola.co.uk/drinks/dr-pepper/dr-pepper" class="btn btn-primary">Find out more ...</a>   
                             </div>
                         </div>
@@ -344,19 +344,19 @@
         </div>
 
         <!-- Library Scripts -->
-        <script src="application/js/jquery.js"></script>
-        <script src="application/js/jquery.fancybox.min.js"></script>
-        <script src="application/js/popper.js"></script>
-        <script src="application/js/bootstrap.js"></script>
-        <script src="application/js/font-awesome.js"></script>
-        <script src="application/js/x3dom.js"></script>
+        <script src="../application/js/jquery.js"></script>
+        <script src="../application/js/jquery.fancybox.min.js"></script>
+        <script src="../application/js/popper.js"></script>
+        <script src="../application/js/bootstrap.js"></script>
+        <script src="../application/js/font-awesome.js"></script>
+        <script src="../application/js/x3dom.js"></script>
 
         <!-- My Scripts -->
-        <script src="application/js/custom.js"></script>
-        <script src="application/js/page-swap.js"></script>
-        <script src="application/js/gallery-generator.js"></script>
-        <script src="application/js/change-look.js"></script>
-        <script src="application/js/get-json-data.js"></script>
-        <script src="application/js/model-interactions.js"></script>
+        <script src="../application/js/custom.js"></script>
+        <script src="../application/js/page-swap.js"></script>
+        <script src="../application/js/gallery-generator.js"></script>
+        <script src="../application/js/change-look.js"></script>
+        <script src="../application/js/get-json-data.js"></script>
+        <script src="../application/js/model-interactions.js"></script>
     </body>
 </html>

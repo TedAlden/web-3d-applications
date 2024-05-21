@@ -88,10 +88,11 @@ class Controller {
 	   $this->load->view('viewDrinks', $data);
 	}
 
-	// Load the Coca Cola view and get data from the model — this is the same as the home() method.
-	function apiCocaCola()
+	// Primary view
+	function mainPage()
 	{
-		$this->load->view('viewCocaCola');	
+		$data = $this->model->dbGetData();
+		$this->load->view('viewCocaCola', $data);	
 	}
 
 	// We can see from this method how to get data from the model and echo it out to the view

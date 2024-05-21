@@ -26,15 +26,28 @@ body {
 
 p {
     font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.75;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1:not(.cola-navbar-brand),
+h2:not(.cola-navbar-brand),
+h3:not(.cola-navbar-brand),
+h4:not(.cola-navbar-brand),
+h5:not(.cola-navbar-brand),
+h6:not(.cola-navbar-brand) {
     font-family: 'Oswald', sans-serif;
+    color: #760003;
+}
+
+.btn-primary {
+    background-color: #760003;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #743c3e;
+    border: none;
 }
 
 .img-thumbnail {
@@ -48,10 +61,11 @@ h6 {
 }
 
 #main_3d_image {
-    background-image: url(../assets/images/main_3D.jpg);
+    background-image: url(../assets/images/main_3D_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
+    height: 300px;
+    border-radius: 5px;
 }
 
 #main_text {
@@ -66,21 +80,21 @@ h6 {
 
 #main_text h2 {
     color: rgba(0, 102, 153, 1);
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 0px;
     margin-bottom: 5px;
 }
 
 #main_text h3 {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #main_text p {
-    font-size: 12px;
     margin: 0px;
-    line-height: 1.2;
+    font-size: 18px;
+    line-height: 1.75;
 }
 
 /* GALLERY */
@@ -96,12 +110,11 @@ h6 {
 }
 
 .gallery-header, .description-header {
-    color: white;
+    color: #760003;
 }
 
 .gallery-header:hover, .description-header:hover {
-    color: green;
-    border: 1px solid transparent;
+    color: white;
 }
 
 /* CARDS */
@@ -127,6 +140,22 @@ h6 {
     background-color: #d8f8ff;
     border-color: #669fab;
     border-bottom-color: #d8f8ff;
+}
+
+.card-img-top-wrapper {
+    max-height: 200px;
+    overflow: hidden;
+    /* scale image on hover */
+}
+
+.card-img-top {
+    vertical-align: middle;
+    transform: scale(1);
+    transition: 0.2s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
 }
 
 /* COCA COLA LOGO */
@@ -188,7 +217,6 @@ h6 {
 }
 
 .camera-btns > p {
-    font-size: 15px;
     color: red;
     padding-left: 0px;
     font-weight: 900;
@@ -204,7 +232,7 @@ h6 {
 
 .btn-responsive {
     padding: 6px 10px;
-    font-size: 90%;
+    font-size: 150%;
     line-height: 1.2;
     white-space: normal !important;
 }
@@ -223,7 +251,7 @@ h6 {
 }
 
 .navbar_coca_cola .navbar-brand:hover {
-    color: green;
+    color: rgba(182, 231, 243, 1.0);
 }
 
 .navbar_coca_cola .navbar-nav>li>a {
@@ -232,7 +260,7 @@ h6 {
 
 .navbar_coca_cola .navbar-nav>li>a:hover,
 .navbar_coca_cola .navbar-nav>li>a:focus {
-    color: green;
+    color: rgba(182, 231, 243, 1.0);
 }
 
 .navbar_coca_cola .navbar-nav .nav-item {
@@ -242,13 +270,14 @@ h6 {
 .navbar_coca_cola .navbar-nav .nav-item>.active,
 .navbar_coca_cola .navbar-nav>.active>a:hover,
 .navbar_coca_cola .navbar-nav>.active>a:focus {
-    color: #760003;
-    background-color: #3399ff;
+    border: 1px dashed white;
+    border-radius: 5px;
+    color: white;
 }
 
 .navbar_coca_cola .navbar-nav>li>a:hover,
 .navbar_coca_cola .navbar-nav>li>a:focus {
-    color: green;
+    color: rgba(182, 231, 243, 1.0);
 }
 
 .navbar_coca_cola .navbar-toggler {
@@ -277,7 +306,7 @@ navbar_coca_cola .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link 
 }
 
 .nav-tabs .nav-link:hover {
-    color: green;
+    color: #760003;
     border: 1px solid transparent;
 }
 
@@ -374,8 +403,29 @@ X3D, x3d {
 
     .btn-responsive {
         padding: 4px 9px;
-        font-size: 60%;
+        font-size: 130%;
         line-height: 1.2;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    #main_text {
+        width: 60%;
+    }
+
+    #main_text h2 {
+        font-size: 20px;
+    }
+
+    #main_text h3 {
+        font-size: 17px;
+    }
+
+    #main_text p {
+        font-size: 15px;;
     }
 }
 
@@ -383,12 +433,29 @@ X3D, x3d {
 @media (min-width: 768px) {
     .btn-responsive {
         padding: 4px 9px;
-        font-size: 130%;
+        font-size: 110%;
         line-height: 1.2;
     }
 
     .gallery .img-thumbnail{
         max-width: 12%;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #main_text {
+        width: 40%;
+    }
+
+    .card-img-top-wrapper {
+        max-height: 100%;
+    }
+
+    .navbar_coca_cola {
+        height: 100px;
     }
 }
 
@@ -396,8 +463,12 @@ X3D, x3d {
 @media (min-width: 992px) {
     .btn-responsive {
         padding: 4px 9px;
-        font-size: 175%;
+        font-size: 85%;
         line-height: 1.2;
+    }
+
+    #main_text {
+        width: 27%;
     }
 }
 

@@ -10,6 +10,7 @@ $(document).ready(function() {
     
     selectPage();
     selectModel();
+    selectControls();
 
     function selectPage() {
 
@@ -112,7 +113,7 @@ $(document).ready(function() {
             $('#pepperDescription').hide();
             $('#navCoke').removeClass("active");
             $('#navSprite').removeClass("active");
-            $('#navPepper').removeClass("active"); 	
+            $('#navPepper').removeClass("active");
             $('#navSprite').addClass("active");
         });
 
@@ -134,6 +135,67 @@ $(document).ready(function() {
             $('#navSprite').removeClass("active");
             $('#navPepper').removeClass("active");
             $('#navPepper').addClass("active");
+        });
+    }
+
+    function selectControls() {
+
+        $('#control-camera').show();
+        $('#control-animation').hide();
+        $('#control-rendering').hide();
+        $('#control-lighting').hide();
+        $('#nav-camera').removeClass("active");
+        $('#nav-animation').removeClass("active");
+        $('#nav-rendering').removeClass("active");
+        $('#nav-lighting').removeClass("active");
+        $('#nav-camera').addClass("active");
+
+        $('#nav-camera').click(function(){
+            $('#control-camera').show();
+            $('#control-animation').hide();
+            $('#control-rendering').hide();
+            $('#control-lighting').hide();
+            $('#nav-camera').removeClass("active");
+            $('#nav-animation').removeClass("active");
+            $('#nav-rendering').removeClass("active");
+            $('#nav-lighting').removeClass("active");
+            $('#nav-camera').addClass("active");
+        });
+
+        $('#nav-animation').click(function(){
+            $('#control-camera').hide();
+            $('#control-animation').show();
+            $('#control-rendering').hide();
+            $('#control-lighting').hide();
+            $('#nav-camera').removeClass("active");
+            $('#nav-animation').removeClass("active");
+            $('#nav-rendering').removeClass("active");
+            $('#nav-lighting').removeClass("active");
+            $('#nav-animation').addClass("active");
+        });
+
+        $('#nav-rendering').click(function(){
+            $('#control-camera').hide();
+            $('#control-animation').hide();
+            $('#control-rendering').show();
+            $('#control-lighting').hide();
+            $('#nav-camera').removeClass("active");
+            $('#nav-animation').removeClass("active");
+            $('#nav-rendering').removeClass("active");
+            $('#nav-lighting').removeClass("active");
+            $('#nav-rendering').addClass("active");
+        });
+
+        $('#nav-lighting').click(function(){
+            $('#control-camera').hide();
+            $('#control-animation').hide();
+            $('#control-rendering').hide();
+            $('#control-lighting').show();
+            $('#nav-camera').removeClass("active");
+            $('#nav-animation').removeClass("active");
+            $('#nav-rendering').removeClass("active");
+            $('#nav-lighting').removeClass("active");
+            $('#nav-lighting').addClass("active");
         });
     }
 

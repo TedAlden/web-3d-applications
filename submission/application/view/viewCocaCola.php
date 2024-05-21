@@ -17,11 +17,11 @@
             <div class="container-fluid">
                 <div class="logo">
                     <a class="navbar-brand" href="#">
-                        <h1>1</h1>
-                        <h1>oca</h1>
-                        <h2>Cola</h2>
-                        <h3>Journey</h3>
-                        <p>Refreshing the world, one story at a time</p>
+                        <h1 class="cola-navbar-brand">1</h1>
+                        <h1 class="cola-navbar-brand">oca</h1>
+                        <h2 class="cola-navbar-brand">Cola</h2>
+                        <h3 class="cola-navbar-brand">Journey</h3>
+                        <p class="cola-navbar-brand">Refreshing the world, one story at a time</p>
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -63,10 +63,12 @@
                 </div>
                 <!-- Cards -->
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="card">
                             <a href="../application/assets/images/coca_cola.jpg">
-                                <img class="card-img-top img-fluid img-thumbnail" src="../application/assets/images/coca_cola.jpg" alt="Coca Cola">
+                                <div class="card-img-top-wrapper">
+                                    <img class="card-img-top img-fluid" src="../application/assets/images/coca_cola.jpg" alt="Coca Cola">
+                                </div>
                             </a>
                             <div class="card-body">
                                 <div id="title_left" class="card-title drinksText"><h2><?php echo $data[0]['brand'] ?></h2></div>
@@ -76,10 +78,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="card">
                             <a href="../application/assets/images/sprite.jpg">
-                                <img class="card-img-top img-fluid img-thumbnail" src="../application/assets/images/sprite.jpg" alt="Sprite">
+                                <div class="card-img-top-wrapper">    
+                                    <img class="card-img-top img-fluid" src="../application/assets/images/sprite.jpg" alt="Sprite">
+                                </div>
                             </a>
                             <div class="card-body">
                                 <div id="title_centre" class="card-title drinksText"><h2><?php echo $data[1]['brand'] ?></h2></div>
@@ -89,10 +93,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="card">
                             <a href="../application/assets/images/dr_pepper.jpg">
-                                <img class="card-img-top img-fluid img-thumbnail" src="../application/assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                                <div class="card-img-top-wrapper">    
+                                    <img class="card-img-top img-fluid" src="../application/assets/images/dr_pepper.jpg" alt="Dr Pepper">
+                                </div>
                             </a>
                             <div class="card-body">
                                 <div id="title_right" class="card-title drinksText"><h2><?php echo $data[2]['brand'] ?></h2></div>
@@ -182,6 +188,76 @@
                                 <a href="http://www.coca-cola.co.uk/drinks/dr-pepper/dr-pepper" class="btn btn-primary">Find out more ...</a>   
                             </div>
                         </div>
+                        <!-- Controls -->
+                        <div class="card text-left">
+                            <div class="card-header">
+                                <ul class="nav nav-tabs card-header-tabs">
+                                    <li class="nav-item">
+                                        <a id="nav-camera" class="nav-link active" href="#">Camera</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="nav-animation" class="nav-link" href="#">Animation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="nav-rendering" class="nav-link" href="#">Rendering</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a id="nav-lighting" class="nav-link" href="#">Lighting</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Camera -->
+                            <div class="card-body" id="control-camera">
+                                <div class="card-Title x3dCamera_Subtitle drinksText">
+                                    <h3>Camera Views</h3>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraPerspective();">Perspective</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBottom();">Bottom</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLogo();">Logo</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLabel();">Label</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraTop();">Top</a>
+                                <div class="card-text x3dCameraDescription drinksText">
+                                    <p>These buttons select a limited range of X3D model viewpoints, use the dropdown menu for more camera views</p>
+                                </div>
+                            </div>
+                            <!-- Animation -->
+                            <div class="card-body" id="control-animation">
+                                <div class="card-Title x3dAnimationSubtitle drinksText">
+                                    <h3>Animation Options</h3>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="spin();">Spin</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="stopRotation();">Stop</a>
+                                <div class="card-text x3dAnimationDescription drinksText">
+                                    <p>These buttons select a range of X3D animation options</p>
+                                </div>
+                            </div>
+                            <!-- Rendering -->
+                            <div class="card-body" id="control-rendering">
+                                <div class="card-Title x3dRendersubtitle drinksText">
+                                    <h3>Render Options</h3>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-responsive">Poly</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="wireframe();">Wire</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="headlight();">Headlight</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="defaultRender();">Default</a>
+                                <div class="card-text x3dRenderDescription drinksText">
+                                    <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
+                                </div>
+                            </div>
+                            <!-- Lighting -->
+                            <div class="card-body" id="control-lighting">
+                                <div class="card-Title x3dRendersubtitle drinksText">
+                                    <h3>Lighting Options</h3>
+                                </div>
+                                <a class="btn btn-primary btn-responsive" href="#">Default</a>
+                                <a class="btn btn-primary btn-responsive" href="#">Onmi On/Off</a>
+                                <a class="btn btn-primary btn-responsive" href="#">Target On/Off</a>
+                                <a class="btn btn-primary btn-responsive" href="#">Headlight On/Off</a>
+                                <div class="card-text x3dRenderDescription drinksText">
+                                    <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -200,117 +276,20 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Interaction controls row -->
-                <div class="row" id="row3">
-                    <div class="col-sm-4">
-                        <!-- Camera control card -->
-                        <div class="card text-left">
-                            <div class="card-header">
-                                <ul class="nav nav-tabs card-header-tabs">
-                                    <!-- Dropdown nav-tab -->
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Cameras</a>
-                                        <div class="dropdown-menu">
-                                            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraPerspective();">Perspective</a>
-                                            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraBottom();">Bottom</a>
-                                            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraLogo();">Logo</a>
-                                            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraLabel();">Label</a>
-                                            <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraTop();">Top</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-Title x3dCamera_Subtitle drinksText">
-                                    <h3>Camera Views</h3>
-                                </div>
-                                <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraPerspective();">Perspective</a>
-                                <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraBottom();">Bottom</a>
-                                <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraLogo();">Logo</a>
-                                <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraLabel();">Label</a>
-                                <a href="#" class="btn btn-secondary btn-responsive" onclick="cameraTop();">Top</a>
-                                <div class="card-text x3dCameraDescription drinksText">
-                                    <p>These buttons select a limited range of X3D model viewpoints, use the dropdown menu for more camera views</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                         <!-- Animation control card -->
-                        <div class="card text-left">
-                            <div class="card-header">
-                                <ul class="nav nav-tabs card-header-tabs">
-                                    <li class="nav-item">
-                                    <a class="nav-link active" href="#">Animation</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-Title x3dAnimationSubtitle drinksText">
-                                    <h3>Animation Options</h3>
-                                </div>
-                                <a href="#" class="btn btn-outline-light btn-responsive" onclick="spin();">Spin</a>
-                                <a href="#" class="btn btn-outline-dark btn-responsive" onclick="stopRotation();">Stop</a>
-                                <div class="card-text x3dAnimationDescription drinksText">
-                                    <p>These buttons select a range of X3D animation options</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <!-- Rendering and lighting card -->
-                        <div class="card text-left">
-                            <div class="card-header">
-                                <ul class="nav nav-tabs card-header-tabs">
-                                    <li class="nav-item">
-                                        <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" >Render</a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Polygon</a>
-                                            <a class="dropdown-item" href="#" onclick="wireframe();">Wireframe</a>
-                                            <a class="dropdown-item" href="#">Vertex</a>
-                                        </div>
-                                    </li>
-                                    <!-- Dropdown nav-tab -->
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Lights</a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Default</a>
-                                            <a class="dropdown-item" href="#">Onmi On/Off</a>
-                                            <a class="dropdown-item" href="#">Target On/Off</a>
-                                            <a class="dropdown-item" href="#">Headlight On/Off</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="card-body">
-                                <div class="card-Title x3dRendersubtitle drinksText">
-                                    <h3>Render and Lighting Options</h3>
-                                </div>
-                                <a href="#" class="btn btn-success btn-responsive">Poly</a>
-                                <a href="#" class="btn btn-secondary btn-responsive" onclick="wireframe();">Wire</a>
-                                <a href="#" class="btn btn-success btn-responsive" onclick="headlight();">Headlight</a>
-                                <a href="#" class="btn btn-outline-dark btn-responsive" onclick="defaultRender();">Default</a>
-                                <div class="card-text x3dRenderDescription drinksText">
-                                    <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- About page -->
             <div id="about" style="display: none;">
-                Insert About Contents
+                <h1>About this project</h1>
+                A 3D web application showcasing Coca Cola brands through 3D modelling using PHP, SQLite3, X3DOM, AJAX, JQuery.
             </div>
         </div>
 
         <!-- Footer -->
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark footer" id="footerColor">
+        <nav class="navbar navbar-expand-sm navbar-dark footer" id="footerColor">
             <div class="container">
                 <div class="navbar-text float-left copyright">
-                    <p><span class="align-baseline">&copy 2019 Mobile Web 3D Applications | <a href="javascript:changeLook()">Restyle</a> | <a href="javascript:changeBack()">Reset</a></span></p>
+                    <p><span class="align-baseline">&copy 2024 Mobile Web 3D Applications | <a href="javascript:changeLook()">Restyle</a> | <a href="javascript:changeBack()">Reset</a></span></p>
                 </div>
                 <div class="navbar-text float-right social">
                     <a href="#"><i class="fab fa-facebook-square fa-2x fa-pullright"></i></a>
@@ -332,7 +311,7 @@
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        <p>Ted Alden-Templeman</p>
+                        <p>Edward Peter (Ted) Alden-Templeman</p>
                         <p>Email: epa22@sussex.ac.uk</p>
                     </div>
                     <!-- Modal footer -->

@@ -212,10 +212,10 @@
                                     <h3>Camera Views</h3>
                                 </div>
                                 <a href="#" class="btn btn-primary btn-responsive" onclick="cameraPerspective();">Perspective</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraTop();">Top</a>
                                 <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBottom();">Bottom</a>
                                 <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLogo();">Logo (Front)</a>
                                 <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLabel();">Label (Rear)</a>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraTop();">Top</a>
                                 <div class="card-text x3dCameraDescription drinksText">
                                     <p>These buttons select a range of X3D model viewpoints.</p>
                                 </div>

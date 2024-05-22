@@ -17,6 +17,7 @@ $(document).ready(function() {
         $('#home').show();
         $('#about').hide();
         $('#models').hide();
+        $('#flickr').hide();
         $('#interaction').hide();
         $('#x3dModelTitle_coke').hide();
         $('#x3dModelTitle_sprite').hide();
@@ -30,6 +31,7 @@ $(document).ready(function() {
             $('#home').show();
             $('#about').hide();
             $('#models').hide();
+            $('#flickr').hide();
             $('#interaction').hide();
             $('#cokeDescription').hide();
             $('#spriteDescription').hide();
@@ -37,6 +39,7 @@ $(document).ready(function() {
             $('#navHome').removeClass("active");
             $('#navAbout').removeClass("active");
             $('#navModels').removeClass("active");
+            $('#navFlickr').removeClass("active");
             $('#navHome').addClass("active");
         });
 
@@ -44,6 +47,7 @@ $(document).ready(function() {
             $('#home').hide();
             $('#about').show();
             $('#models').hide();
+            $('#flickr').hide();
             $('#interaction').hide();
             $('#cokeDescription').hide();
             $('#spriteDescription').hide();
@@ -51,6 +55,7 @@ $(document).ready(function() {
             $('#navHome').removeClass("active");
             $('#navAbout').removeClass("active");
             $('#navModels').removeClass("active");
+            $('#navFlickr').removeClass("active");
             $('#navAbout').addClass("active");
         });
 
@@ -58,6 +63,7 @@ $(document).ready(function() {
             $('#home').hide();
             $('#about').hide();
             $('#models').show();
+            $('#flickr').hide();
             $('#interaction').show();
             $('#x3dModelTitle_coke').show();
             $('#x3dModelTitle_sprite').hide();
@@ -71,7 +77,24 @@ $(document).ready(function() {
             $('#navHome').removeClass("active");
             $('#navAbout').removeClass("active");
             $('#navModels').removeClass("active");
+            $('#navFlickr').removeClass("active");
             $('#navModels').addClass("active");
+        });
+
+        $('#navFlickr').click(function(){
+            $('#home').hide();
+            $('#about').hide();
+            $('#models').hide();
+            $('#flickr').show();
+            $('#interaction').hide();
+            $('#cokeDescription').hide();
+            $('#spriteDescription').hide();
+            $('#pepperDescription').hide();
+            $('#navHome').removeClass("active");
+            $('#navAbout').removeClass("active");
+            $('#navModels').removeClass("active");
+            $('#navAbout').removeClass("active");
+            $('#navFlickr').addClass("active");
         });
     }
 

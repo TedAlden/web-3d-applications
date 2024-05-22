@@ -29,6 +29,9 @@
                             <a id="navModels" class="nav-link"  href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-placement="bottom" title="X3D Models" data-content="There are three X3D models: Coke, Sprite and Pepper">Models</a>
                         </li>
                         <li class="nav-item">
+                            <a id="navFlickr" class="nav-link"  href="#">Flickr</a>
+                        </li>
+                        <li class="nav-item">
                             <a id="navContact" class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
                         </li>
                     </ul>
@@ -49,6 +52,11 @@
         <!-- About page -->
         <div class="container-fluid main_contents" id="about" style="display: none;">
             <?php include("includes/about_page.php"); ?>
+        </div>
+
+        <!-- Flickr page -->
+        <div class="container-fluid main_contents" id="flickr" style="display: none;">
+            <?php include("includes/flickr_page.php"); ?>
         </div>
 
         <!-- Contact Modal -->

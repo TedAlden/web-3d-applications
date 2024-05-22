@@ -52,7 +52,7 @@
                 <!-- Heading -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <div id="main_3d_image">
+                        <div id="main_3d_image" class="coke">
                             <div id="main_text" class="col-xs-12 col-sm-4">
                                 <div id="title_home"></div>
                                 <div id="subTitle_home"></div>

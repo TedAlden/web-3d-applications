@@ -61,11 +61,23 @@ h6:not(.cola-navbar-brand) {
 }
 
 #main_3d_image {
-    background-image: url(../assets/images/main_3D_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: center;
     height: 300px;
     border-radius: 5px;
+}
+
+#main_3d_image.coke {
+    background-image: url(../assets/images/main_coke.jpg);
+}
+
+#main_3d_image.sprite {
+    background-image: url(../assets/images/main_sprite.jpg);
+}
+
+#main_3d_image.pepper {
+    background-image: url(../assets/images/main_pepper.jpg);
 }
 
 #main_text {

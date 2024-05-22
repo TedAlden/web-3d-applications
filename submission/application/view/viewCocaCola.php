@@ -252,12 +252,16 @@
                                     <label class="form-check-label" for="checkboxHeadlight">Headlight</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight1" onclick="omnilight1();" checked>
-                                    <label class="form-check-label" for="checkboxOmnilight1">Rear light</label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight5" onclick="omnilight5();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight5">Top light</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight2" onclick="omnilight2();" checked>
                                     <label class="form-check-label" for="checkboxOmnilight2">Bottom light</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight6" onclick="omnilight6();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight6">Left light</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight3" onclick="omnilight3();" checked>
@@ -268,13 +272,9 @@
                                     <label class="form-check-label" for="checkboxOmnilight4">Front light</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight5" onclick="omnilight5();" checked>
-                                    <label class="form-check-label" for="checkboxOmnilight5">Top light</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight6" onclick="omnilight6();" checked>
-                                    <label class="form-check-label" for="checkboxOmnilight6">Left light</label>
-                                </div>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight1" onclick="omnilight1();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight1">Rear light</label>
+                                </div>                               
                                 <div class="card-text x3dRenderDescription drinksText">
                                     <p>These buttons select a number of lighting options.</p>
                                 </div>

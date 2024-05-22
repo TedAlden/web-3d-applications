@@ -37,7 +37,6 @@
                 padding: 5px;
                 float: left;
                 margin: 5px;
-                width: 220px;
                 height: auto;
             }
         </style> 
@@ -47,19 +46,31 @@
             <?php for ($i=0; $i <count ($data); $i++){ ?>
             <div class="boxModel">
                 <div class="boxText">
-                    <h2><?php echo $data[$i]['x3dModelTitle'] ?></h2>
+                    <p><?php echo $data[$i]['brand'] ?></p>
                 </div>
                 <div class="boxText">
-                    <h2><?php echo $data[$i]['x3dCreationMethod'] ?></h2>
+                    <p><?php echo $data[$i]['year'] ?></p>
                 </div>
                 <div class="boxText">
-                    <h2><?php echo $data[$i]['modelTitle'] ?></h2>
+                    <p><?php echo $data[$i]['location'] ?></p>
                 </div>
                 <div class="boxText">
-                    <h2><?php echo $data[$i]['modelSubtitle'] ?></h2>
+                    <p><?php echo $data[$i]['x3dPath'] ?></p>
                 </div>
                 <div class="boxText">
-                    <h2><?php echo $data[$i]['modelDescription'] ?></h2>
+                    <p><?php echo $data[$i]['x3dModelTitle'] ?></p>
+                </div>
+                <div class="boxText">
+                    <p><?php echo $data[$i]['x3dCreationMethod'] ?></p>
+                </div>
+                <div class="boxText">
+                    <p><?php echo $data[$i]['modelTitle'] ?></p>
+                </div>
+                <div class="boxText">
+                    <p><?php echo $data[$i]['modelSubtitle'] ?></p>
+                </div>
+                <div class="boxText">
+                    <p><?php echo $data[$i]['modelDescription'] ?></p>
                 </div>
             </div>
             <?php } ?>

@@ -122,13 +122,13 @@
                             <div class="card-header">
                                 <ul class="nav nav-tabs card-header-tabs">
                                     <li class="nav-item">
-                                        <a id="navCoke" class="nav-link active" href="#" onMouseUp="cokeScene(); cokeDescription();">Coke</a>
+                                        <a id="navCoke" class="nav-link active" href="#" onMouseUp="cokeScene();">Coke</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a id="navSprite" class="nav-link" href="#" onMouseUp="spriteScene(); spriteDescription();">Sprite</a>
+                                        <a id="navSprite" class="nav-link" href="#" onMouseUp="spriteScene();">Sprite</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a id="navPepper" class="nav-link" href="#" onMouseUP="pepperScene(); pepperDescription();">Pepper</a>
+                                        <a id="navPepper" class="nav-link" href="#" onMouseUP="pepperScene();">Pepper</a>
                                     </li>
                                 </ul>
                             </div>
@@ -213,11 +213,11 @@
                                 </div>
                                 <a href="#" class="btn btn-primary btn-responsive" onclick="cameraPerspective();">Perspective</a>
                                 <a href="#" class="btn btn-primary btn-responsive" onclick="cameraBottom();">Bottom</a>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLogo();">Logo</a>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLabel();">Label</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLogo();">Logo (Front)</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="cameraLabel();">Label (Rear)</a>
                                 <a href="#" class="btn btn-primary btn-responsive" onclick="cameraTop();">Top</a>
                                 <div class="card-text x3dCameraDescription drinksText">
-                                    <p>These buttons select a limited range of X3D model viewpoints, use the dropdown menu for more camera views</p>
+                                    <p>These buttons select a range of X3D model viewpoints.</p>
                                 </div>
                             </div>
                             <!-- Animation -->
@@ -225,10 +225,10 @@
                                 <div class="card-Title x3dAnimationSubtitle drinksText">
                                     <h3>Animation Options</h3>
                                 </div>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="spin();">Spin</a>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="stopRotation();">Stop</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="spin();">Toggle Spin</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="stopRotation();">Stop Spin</a>
                                 <div class="card-text x3dAnimationDescription drinksText">
-                                    <p>These buttons select a range of X3D animation options</p>
+                                    <p>These buttons select a range of X3D animation options.</p>
                                 </div>
                             </div>
                             <!-- Rendering -->
@@ -236,12 +236,9 @@
                                 <div class="card-Title x3dRendersubtitle drinksText">
                                     <h3>Render Options</h3>
                                 </div>
-                                <a href="#" class="btn btn-primary btn-responsive">Poly</a>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="wireframe();">Wire</a>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="headlight();">Headlight</a>
-                                <a href="#" class="btn btn-primary btn-responsive" onclick="defaultRender();">Default</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="wireframe();">Toggle Wireframe</a>
                                 <div class="card-text x3dRenderDescription drinksText">
-                                    <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
+                                    <p>These buttons select a number of render options.</p>
                                 </div>
                             </div>
                             <!-- Lighting -->
@@ -249,12 +246,37 @@
                                 <div class="card-Title x3dRendersubtitle drinksText">
                                     <h3>Lighting Options</h3>
                                 </div>
-                                <a class="btn btn-primary btn-responsive" href="#">Default</a>
-                                <a class="btn btn-primary btn-responsive" href="#">Onmi On/Off</a>
-                                <a class="btn btn-primary btn-responsive" href="#">Target On/Off</a>
-                                <a class="btn btn-primary btn-responsive" href="#">Headlight On/Off</a>
+                                <a href="#" class="btn btn-primary btn-responsive" onclick="defaultLights();">Default Lighting</a>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxHeadlight" onclick="headlight();" checked>
+                                    <label class="form-check-label" for="checkboxHeadlight">Headlight</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight1" onclick="omnilight1();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight1">Rear light</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight2" onclick="omnilight2();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight2">Bottom light</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight3" onclick="omnilight3();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight3">Right light</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight4" onclick="omnilight4();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight4">Front light</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight5" onclick="omnilight5();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight5">Top light</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkboxOmnilight6" onclick="omnilight6();" checked>
+                                    <label class="form-check-label" for="checkboxOmnilight6">Left light</label>
+                                </div>
                                 <div class="card-text x3dRenderDescription drinksText">
-                                    <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
+                                    <p>These buttons select a number of lighting options.</p>
                                 </div>
                             </div>
                         </div>

@@ -37,15 +37,6 @@ class Model {
 		}
 		$this->dbhandle = NULL;
 	}
-	
-	// This is a simple fix to represent, what would in reality be, a table in the database containing the brand names. 
-	// The database schema would then contain a foreign key for each drink entry linking back to the brand name
-	// This stuture allows us to read the list of brand names to populate a menu in a view
-	public function dbGetBrand()
-	{
-		// Return the car Brand Names
-		return array("-", "Coke", "Coke Light","Coke Zero","Sprite", "Dr Pepper", "Fanta");
-	}
 
 	public function dbInsertData()
 	{
@@ -101,31 +92,6 @@ class Model {
 		$this->dbhandle = NULL;
 		// Send the response back to the view
 		return $result;
-	}
-	
-	//Method to simulate the model data
-	public function model3D_info()
-	{
-		// Simulate the model's data
-		return array(
-			'model_1' => 'Coke Light',
-			'image3D_1' => 'Coke Light',
-
-			'model_2' => 'Coke Zero',
-			'image3D_2' => 'Coke Zero',
-
-			'model_3' => 'Coke',
-			'image3D_3' => 'Coke',
-
-			'model_4' => 'Dr Pepper',
-			'image3D_4' => 'Dr Pepper',
-
-			'model_5' => 'Fanta',
-			'image3D_5' => 'Fanta',
-
-			'model_6' => 'Sprite',
-			'image3D_6' => 'Sprite'
-		);
 	}
 }
 ?>

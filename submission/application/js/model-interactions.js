@@ -22,19 +22,28 @@ var spinning = false;
 
 function spin() {
 	spinning = !spinning;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__RotationTimerCoke').setAttribute('enabled', spinning.toString());
+	// document.getElementById('model__RotationTimerSprite').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__RotationTimerPepper').setAttribute('enabled', spinning.toString());
 }
 
 function stopRotation() {
 	spinning = false;
-	document.getElementById('model__RotationTimer').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__RotationTimerCoke').setAttribute('enabled', spinning.toString());
+	// document.getElementById('model__RotationTimerSprite').setAttribute('enabled', spinning.toString());
+	document.getElementById('model__RotationTimerPepper').setAttribute('enabled', spinning.toString());
 }
 
 function animateModel() {
-    if(document.getElementById('model__RotationTimer').getAttribute('enabled')!= 'true')
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'true');
-    else
-        document.getElementById('model__RotationTimer').setAttribute('enabled', 'false');
+    if (!spinning) {
+        document.getElementById('model__RotationTimerCoke').setAttribute('enabled', 'true');
+		// document.getElementById('model__RotationTimerSprite').setAttribute('enabled', 'true');
+		document.getElementById('model__RotationTimerPepper').setAttribute('enabled', 'true');
+	} else {
+        document.getElementById('model__RotationTimerCoke').setAttribute('enabled', 'false');
+		// document.getElementById('model__RotationTimerSprite').setAttribute('enabled', 'false');
+		document.getElementById('model__RotationTimerPepper').setAttribute('enabled', 'false');
+	}
 }
 
 // Render

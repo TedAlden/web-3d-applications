@@ -31,16 +31,16 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a id="navHome" class="nav-link active" href="#">Home</a>
-                          </li>
-                          <li class="nav-item">
-                              <a id="navAbout" class="nav-link" href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-placement="bottom" title="About Web 3D Applications" data-content="3D Apps is a final year and postgraduate module ...">About</a>
-                          </li>
-                          <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
+                            <a id="navAbout" class="nav-link" href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-placement="bottom" title="About Web 3D Applications" data-content="3D Apps is a final year and postgraduate module ...">About</a>
+                        </li>
+                        <li class="nav-item">
                             <a id="navModels" class="nav-link"  href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-placement="bottom" title="X3D Models" data-content="There are three X3D models: Coke, Sprite and Pepper">Models</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
-                          </li>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navContact" class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </div>

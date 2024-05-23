@@ -174,9 +174,27 @@
                 Gallery
             </div>
             <div class="card-body">
-                <div class="card-title title_gallery drinksText"></div>
-                <div class="gallery" id="gallery"></div>
-                <div class="card-text description_gallery drinksText"></div>
+                <div class="container" id="featureContainer">
+                    <!-- Start carousel code -->
+                    <!-- Source: https://www.jqueryscript.net/slider/multi-item-carousel-bootstrap.html -->
+                    <div class="row mx-auto my-auto justify-content-center">
+                        <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <h2 class="font-weight-light float-start">Image Gallery</h2>
+                            <!-- Prev & Next Buttons -->
+                            <div class="float-end pe-md-4">
+                                <a class="indicator" href="#featureCarousel" role="button" data-bs-slide="prev">
+                                    <span class="fas fa-chevron-left" aria-hidden="true"></span>
+                                </a> &nbsp;&nbsp;
+                                <a class="w-aut indicator" href="#featureCarousel" role="button" data-bs-slide="next">
+                                    <span class="fas fa-chevron-right" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                                <!-- Carousel Items -->
+                            <div id="carousel-gallery" class="carousel-inner" role="listbox"></div>
+                        </div>
+                    </div>
+                    <!-- End carousel code -->
+                </div>
             </div>
         </div>
     </div>

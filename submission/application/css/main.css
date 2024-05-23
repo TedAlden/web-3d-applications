@@ -60,6 +60,12 @@ h6:not(.cola-navbar-brand) {
     height: auto;
 }
 
+/* Carousel indicator */
+a.indicator {
+    color: #760003 !important;
+    border-color: #760003 !important;
+}
+
 #main_3d_image {
     background-repeat: no-repeat;
     background-size: cover;

@@ -22,6 +22,7 @@
     <script src="../application/js/font-awesome.js"></script>
     <script src="../application/js/x3dom.js"></script>
     <script src="../application/js/flickrService.js"></script>
+    <script src="../application/js/carousel.js"></script>
 
     <!-- My Scripts -->
     <script src="../application/js/custom.js"></script>

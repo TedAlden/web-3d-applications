@@ -2,6 +2,23 @@
     "homePage": {
 		"title": "Coca Cola Great Britain",
 		"subTitle": "Founded in 1886 Dr John S Pemberton",		
-		"description": "The Coca Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands."
+		"description": "The Coca Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic beverage concentrates and syrups, and produces nearly 400 brands.",
+		"carousel": [
+			{
+				"title": "Foodmarks by Coca-Cola",
+				"body": "'Foodmarks represent destinations and experiences crafted with a blend of three essential elements: the perfect moment, the perfect meal, and an ice-cold Coca-Cola. Explore our map to uncover food landmarks in various cities and neighborhoods around the world.'",
+				"link": "https://cocacolafoodmarks.timeout.com/"
+			},
+			{
+				"title": "We're going naked for now",
+				"body": "'In a short UK trial, we're stripping off the labels from our Sprite bottles to help simplify the recycling process.'",
+				"link": "https://www.coca-cola.com/gb/en/brands/sprite/label-less"
+			},
+			{
+				"title": "Other Brands",
+				"body": "View our other brands including Fanta, Oasis, and Schweppes!",
+				"link": "https://www.coca-cola.com/gb/en/brands"
+			}
+		]
 	}
 }

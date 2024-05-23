@@ -60,11 +60,31 @@ h6:not(.cola-navbar-brand) {
     height: auto;
 }
 
-/* Carousel indicator */
+/* Carousel */
+
 a.indicator {
     color: #760003 !important;
     border-color: #760003 !important;
 }
+
+#homepageCarousel {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+#homepageCarousel .carousel-item {
+    min-height: 200px;
+}
+
+#homepageCarousel .carousel-item div {
+    height: calc(100% - 23px);
+    margin-bottom: 50px;
+    margin: 0 15%;
+    width: 70%;
+}
+
+/* Other */
 
 #main_3d_image {
     background-repeat: no-repeat;

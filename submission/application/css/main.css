@@ -392,17 +392,16 @@ X3D, x3d {
     border-radius: 5px;
 }
 
+/* Footer */
+
+.footer {
+    background-color: #760003;
+}
+
 /* MEDIA QUERIES */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
-    /* CSS rule to style the footer */
-    .footer {
-        background-color: #760003;
-        height: 60px;
-    }
-
     .navbar-text>a {
         font-size: 10px;
     }
